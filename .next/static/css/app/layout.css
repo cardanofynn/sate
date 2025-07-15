@@ -514,6 +514,9 @@
   .min-h-0 {
     min-height: calc(var(--spacing) * 0);
   }
+  .min-h-\[200vh\] {
+    min-height: 200vh;
+  }
   .min-h-screen {
     min-height: 100vh;
   }
