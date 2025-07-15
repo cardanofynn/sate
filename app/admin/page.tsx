@@ -20,11 +20,14 @@ export default function Page() {
     <div className="h-screen overflow-hidden">
       <div
         className="fixed inset-0 z-[-1] bg-cover bg-center"
-        style={{ backgroundImage: "url('/background.png')" }}
+        style={{ 
+          backgroundImage: "url('/background.png')",
+          minHeight: '200vh' // Extend background for overscroll
+        }}
       />
       <SidebarProvider>
         <AppSidebar />
-        <SidebarInset className="flex flex-col h-screen"> 
+        <SidebarInset className="flex flex-col h-screen" style={{ backgroundColor: 'transparent' }}> 
           <header className="flex h-16 shrink-0 items-center gap-2 border-b">
             <div className="flex items-center gap-2 px-4">
               <SidebarTrigger className="-ml-1" />
@@ -47,7 +50,7 @@ export default function Page() {
               </Breadcrumb>
             </div>
           </header>
-          <div className="flex-1 overflow-hidden">
+          <div className="flex-1 overflow-hidden" style={{ backgroundColor: 'transparent' }}>
             <Dashboard />
           </div>
         </SidebarInset>
